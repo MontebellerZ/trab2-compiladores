@@ -1,0 +1,19 @@
+{
+  "name": "trab2-compiladores",
+  "version": "1.0.0",
+  "main": "analisador.js",
+  "scripts": {
+    "start": "node analisador.js entradas/entrada_05.txt > output.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MontebellerZ/trab2-compiladores.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MontebellerZ/trab2-compiladores/issues"
+  },
+  "homepage": "https://github.com/MontebellerZ/trab2-compiladores#readme",
+  "description": ""
+}

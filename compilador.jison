@@ -1,11 +1,12 @@
 %{
-  var escopoAtual = 0;
-  var tabelaSimbolos = [];
-  var tabelaDefinicoes = {}; // Tabela para armazenar definições do pré-processador
+  var profundidadeEscopo = 0;           // Profundidade hierárquica de escopos (0 = global)
+  var pilhaEscopos = [new Map()];       // Pilha de mapas de símbolos por escopo (0 = escopo global)
+  var tabelaSimbolos = [];              // Tabela acumulada para saída (todos os símbolos)
+  var tabelaDefinicoes = {};            // Tabela para armazenar definições do pré-processador
   var temp = [];
   var tac = [];
-    var assignments = []; // armazenar atribuições com suas ASTs e TACs
-    var currentTac = null; // buffer temporário para TAC da instrução atual
+  var assignments = [];                 // armazenar atribuições com suas ASTs e TACs
+  var currentTac = null;                // buffer temporário para TAC da instrução atual
   var erros = [];
   var arvores = [];
   var comment_flag = false;
@@ -103,26 +104,56 @@
   }
 
   function criarVariavel(tipo, nome, valor) {
+      // Armazenar na pilha de escopos (escopo atual)
+      const escopoAtual = pilhaEscopos[pilhaEscopos.length - 1];
+      escopoAtual.set(nome, { tipo, valor, profundidade: profundidadeEscopo });
+      
+      // Armazenar também na tabela global para exibição final
       if (typeof valor === 'string') {
           const variavelExistente = tabelaSimbolos.find(dictAtual => dictAtual.id === valor);
           if (variavelExistente) {
-              tabelaSimbolos.push({ tipo, id: nome, val: variavelExistente.val, escopo: escopoAtual });
+              tabelaSimbolos.push({ tipo, id: nome, val: variavelExistente.val, escopo: profundidadeEscopo });
           }
       } else {
-          tabelaSimbolos.push({ tipo, id: nome, val: valor, escopo: escopoAtual });
+          tabelaSimbolos.push({ tipo, id: nome, val: valor, escopo: profundidadeEscopo });
       }
   }
 
   function verificaVariavel(id) {
-    if (typeof id === 'string' && /^'.+'$/.test(id)) {
-        return; // Ignora CHAR_LIT como 'A', 'B', 'C'
-    }
-    if (tabelaDefinicoes.hasOwnProperty(id)) return; // se for constante definida, está OK
-    const variavel = tabelaSimbolos.find(v => v.id === id);
-    if (!variavel) {
-        erros.push("Variável '" + id + "' não declarada");
-    }
-}
+      if (typeof id === 'string' && /^'.+'$/.test(id)) {
+          return; // Ignora CHAR_LIT como 'A', 'B', 'C'
+      }
+      if (tabelaDefinicoes.hasOwnProperty(id)) return; // se for constante definida, está OK
+      
+      // Procurar em todos os escopos, começando do atual até o global
+      for (let i = pilhaEscopos.length - 1; i >= 0; i--) {
+          if (pilhaEscopos[i].has(id)) {
+              return; // Variável encontrada no escopo
+          }
+      }
+      
+      // Procurar APENAS membros de enum na tabela global (enum members são special)
+      for (let j = 0; j < tabelaSimbolos.length; j++) {
+          if (tabelaSimbolos[j].id === id && tabelaSimbolos[j].tipo.startsWith('enum')) {
+              return; // Encontrou enum member na tabela global
+          }
+      }
+      
+      // Não encontrou em nenhum escopo nem na tabela de enum
+      erros.push("Variável '" + id + "' não declarada");
+  }
+
+  function entrarBloco() {
+      profundidadeEscopo++;
+      pilhaEscopos.push(new Map()); // Novo escopo para este bloco
+  }
+
+  function sairBloco() {
+      if (pilhaEscopos.length > 1) {
+          pilhaEscopos.pop(); // Remove o mapa do escopo ao sair do bloco
+          profundidadeEscopo--;
+      }
+  }
 
 
   function verificaTipos(varOne, varTwo) {
@@ -509,10 +540,22 @@ return_stmt
     ;
 
 statement_composto
-    : '{' statements_list '}'
-    { $$ = { node: new Node('BLOCK', $2.node) }; }
-    | '{' '}'
-    { $$ = { node: new Node('EMPTY_BLOCK') }; }
+    : enter_scope '{' statements_list '}' 
+    { 
+        sairBloco();
+        $$ = { node: new Node('BLOCK', $3.node) }; 
+    }
+    | enter_scope '{' '}' 
+    { 
+        sairBloco();
+        $$ = { node: new Node('EMPTY_BLOCK') }; 
+    }
+    ;
+
+/* Regra para entrar em novo escopo - chamada antes de abrir bloco */
+enter_scope
+    : /* empty */
+    { entrarBloco(); }
     ;
 
 /* Declaração de variável, atribuição de valor, expressão condicional */
@@ -1991,7 +2034,7 @@ enum_decl
         $$ = { node: new Node('ENUM_DECL', new Node($2), $4.node) };
         if ($2 === 'Color') {
             ['RED', 'GREEN', 'BLUE'].forEach(val => {
-                tabelaSimbolos.push({ tipo: 'enum ' + $2, id: val, val: val, escopo: escopoAtual });
+                tabelaSimbolos.push({ tipo: 'enum ' + $2, id: val, val: val, escopo: profundidadeEscopo });
             });
         }
     }
@@ -2002,7 +2045,7 @@ enum_decl
         tabelaDefinicoes[$2] = 'enum';  // Registra o tipo enum
         // Registra cada valor do enum como uma constante na tabela de símbolos
         $4.values.forEach(val => {
-            tabelaSimbolos.push({ tipo: 'enum', id: val, val: val, escopo: escopoAtual });
+            tabelaSimbolos.push({ tipo: 'enum', id: val, val: val, escopo: profundidadeEscopo });
         });
     } */
     | ENUM IDF '{' enum_member_list '}' IDF ';'

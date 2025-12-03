@@ -1,0 +1,1159 @@
+Iniciando análise...
+Arquivo entradas/entrada_05.txt lido com sucesso.
+Iniciando parse...
+Token INCLUDE
+Token LT
+Token STDIO_H
+Token GT
+Token INCLUDE
+Token LT
+Token STDLIB_H
+Token GT
+Token DEFINE
+Token IDF
+Token INT_LIT
+Token STRUCT
+Token IDF
+Token LBRACE
+Token INT
+Token IDF
+Token SEMICOLON
+Token CHAR
+Token IDF
+Token LBRACKET
+Token INT_LIT
+Token RBRACKET
+Token SEMICOLON
+Token RBRACE
+Token SEMICOLON
+Token UNION
+Token IDF
+Token LBRACE
+Token INT
+Token IDF
+Token SEMICOLON
+Token FLOAT
+Token IDF
+Token SEMICOLON
+Token RBRACE
+Token SEMICOLON
+Token ENUM
+Token IDF
+Token LBRACE
+Token IDF
+Token COMMA
+Token IDF
+Token COMMA
+Token IDF
+Token RBRACE
+Token SEMICOLON
+Token VOID
+Token IDF
+Token LPAREN
+Token INT
+Token MUL
+Token IDF
+Token COMMA
+Token INT
+Token IDF
+Token RPAREN
+Token SEMICOLON
+Token INT
+Token MAIN
+Token LPAREN
+Token RPAREN
+Token LBRACE
+Token INT
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+Token ASSIGN
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token RBRACE
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token SIGNED
+Token INT
+Token IDF
+Token ASSIGN
+Token SUB
+Token INT_LIT
+Token SEMICOLON
+Token UNSIGNED
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token LONG
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token SHORT
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token FLOAT
+Token IDF
+Token ASSIGN
+Token F_LIT
+Token SEMICOLON
+Token DOUBLE
+Token IDF
+Token ASSIGN
+Token F_LIT
+Token SEMICOLON
+Token CHAR
+Token IDF
+Token ASSIGN
+Token CHAR_LIT: 'A'
+Token SEMICOLON
+Token CONST
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token VOLATILE
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token LBRACE
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token LBRACE
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token IDF
+Token SUM
+FATOR: val
+Token IDF
+Token SEMICOLON
+FATOR: x
+Token INT
+Token IDF
+Token SEMICOLON
+Token FOR
+Token LPAREN
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token IDF
+Token ASSIGN
+Token IDF
+Token MUL
+FATOR: i
+Token INT_LIT
+Token MUL
+Token IDF
+Token SUM
+FATOR: val
+Token IDF
+Token SEMICOLON
+FATOR: x
+Token RBRACE
+Token RBRACE
+Token INT
+Token IDF
+Token ASSIGN
+Token IDF
+Token SUM
+FATOR: val
+Token IDF
+Token SEMICOLON
+FATOR: x
+Token INT
+Token MUL
+Token IDF
+Token ASSIGN
+Token LPAREN
+Token INT
+Token MUL
+Token RPAREN
+Token MALLOC
+Token LPAREN
+Token IDF
+Token MUL
+Token SIZEOF
+Token LPAREN
+Token INT
+Token RPAREN
+Token RPAREN
+Token SEMICOLON
+Token IF
+Token LPAREN
+Token IDF
+Token EQ
+Token NULL
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Erro na alocação de memória\n"
+Token RPAREN
+Token SEMICOLON
+Token RETURN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token INT
+Token IDF
+Token LBRACKET
+Token INT_LIT
+Token RBRACKET
+Token LBRACKET
+Token INT_LIT
+Token RBRACKET
+Token ASSIGN
+Token LBRACE
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token RBRACE
+Token COMMA
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token RBRACE
+Token COMMA
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token RBRACE
+Token RBRACE
+Token SEMICOLON
+Token STRUCT
+Token IDF
+Token IDF
+Token ASSIGN
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token STRING_LIT: "John"
+Token RBRACE
+Token SEMICOLON
+Token UNION
+Token IDF
+Token IDF
+Token SEMICOLON
+Token IDF
+Token DOT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token ENUM
+Token IDF
+Token IDF
+Token ASSIGN
+Token IDF
+Token SEMICOLON
+FATOR: RED
+Token IF
+Token LPAREN
+Token IDF
+Token GT
+Token INT_LIT
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "x é positivo.\n"
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token ELSE
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "x é negativo ou zero.\n"
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token SWITCH
+Token LPAREN
+Token IDF
+Token RPAREN
+FATOR: color
+Token LBRACE
+Token CASE
+Token IDF
+Token COLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "A cor é Vermelho.\n"
+Token RPAREN
+Token SEMICOLON
+Token BREAK
+Token SEMICOLON
+Token CASE
+Token IDF
+Token COLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "A cor é Verde.\n"
+Token RPAREN
+Token SEMICOLON
+Token BREAK
+Token SEMICOLON
+Token CASE
+Token IDF
+Token COLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "A cor é Azul.\n"
+Token RPAREN
+Token SEMICOLON
+Token BREAK
+Token SEMICOLON
+Token DEFAULT
+Token COLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Cor desconhecida.\n"
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token FOR
+Token LPAREN
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "For loop - Iteração %d\n"
+Token COMMA
+Token IDF
+Token RPAREN
+FATOR: i
+Token SEMICOLON
+Token RBRACE
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token WHILE
+Token LPAREN
+Token IDF
+Token LT
+Token INT_LIT
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "While loop - Contagem: %d\n"
+Token COMMA
+Token IDF
+Token RPAREN
+FATOR: count
+Token SEMICOLON
+Token IDF
+Token INC
+Token SEMICOLON
+Token RBRACE
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token DO
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Do-while loop - Contagem: %d\n"
+Token COMMA
+Token IDF
+Token RPAREN
+FATOR: count
+Token SEMICOLON
+Token IDF
+Token INC
+Token SEMICOLON
+Token RBRACE
+Token WHILE
+Token LPAREN
+Token IDF
+Token LT
+Token INT_LIT
+Token RPAREN
+Token SEMICOLON
+Token FOR
+Token LPAREN
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token ASSIGN
+Token IDF
+Token MUL
+FATOR: i
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token IDF
+Token LPAREN
+Token IDF
+Token COMMA
+FATOR: ptr
+Token INT_LIT
+Token RPAREN
+Token SEMICOLON
+Token REGISTER
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Variável registrada: %d\n"
+Token COMMA
+Token IDF
+Token RPAREN
+FATOR: fast_var
+Token SEMICOLON
+Token FREE
+Token LPAREN
+Token IDF
+Token RPAREN
+FATOR: ptr
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Memória desalocada com sucesso.\n"
+Token RPAREN
+Token SEMICOLON
+Token RETURN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token VOID
+Token IDF
+Token LPAREN
+Token INT
+Token MUL
+Token IDF
+Token COMMA
+Token INT
+Token IDF
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Array dinâmico: "
+Token RPAREN
+Token SEMICOLON
+Token FOR
+Token LPAREN
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token IDF
+Token SEMICOLON
+FATOR: size
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "%d "
+Token COMMA
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "\n"
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token EOF
+Análise Sintática concluída com sucesso!
+
+Tabela de símbolos:
+┌─────────┬────────────────┬────────────────┬────────────────────────────────────────────────────┬────────┐
+│ (index) │ tipo           │ id             │ val                                                │ escopo │
+├─────────┼────────────────┼────────────────┼────────────────────────────────────────────────────┼────────┤
+│ 0       │ 'enum Color'   │ 'RED'          │ 'RED'                                              │ 0      │
+│ 1       │ 'enum Color'   │ 'GREEN'        │ 'GREEN'                                            │ 0      │
+│ 2       │ 'enum Color'   │ 'BLUE'         │ 'BLUE'                                             │ 0      │
+│ 3       │ 'int*'         │ 'arr'          │ null                                               │ 0      │
+│ 4       │ 'int'          │ 'size'         │ null                                               │ 0      │
+│ 5       │ 'int[]'        │ 'array'        │ [ [Object], [Object], [Object], ... 2 more items ] │ 1      │
+│ 6       │ 'int'          │ 'array'        │ null                                               │ 1      │
+│ 7       │ 'int'          │ 'x'            │ 10                                                 │ 1      │
+│ 8       │ 'int'          │ '10'           │ null                                               │ 1      │
+│ 9       │ 'signed int'   │ 'w'            │ -20                                                │ 1      │
+│ 10      │ 'signed int'   │ 'temp879'      │ null                                               │ 1      │
+│ 11      │ 'unsigned int' │ 'tt'           │ 50                                                 │ 1      │
+│ 12      │ 'unsigned int' │ '50'           │ null                                               │ 1      │
+│ 13      │ 'long int'     │ 'rt'           │ 100000                                             │ 1      │
+│ 14      │ 'long int'     │ '100000'       │ null                                               │ 1      │
+│ 15      │ 'short int'    │ 'si'           │ 5                                                  │ 1      │
+│ 16      │ 'short int'    │ '5'            │ null                                               │ 1      │
+│ 17      │ 'float'        │ 'f'            │ 3.14                                               │ 1      │
+│ 18      │ 'float'        │ '3.14'         │ null                                               │ 1      │
+│ 19      │ 'double'       │ 'd'            │ 2.718                                              │ 1      │
+│ 20      │ 'double'       │ '2.718'        │ null                                               │ 1      │
+│ 21      │ 'char'         │ 'ch'           │ 65                                                 │ 1      │
+│ 22      │ 'char'         │ "'A'"          │ null                                               │ 1      │
+│ 23      │ 'const int'    │ 'constant_var' │ 500                                                │ 1      │
+│ 24      │ 'const int'    │ '500'          │ null                                               │ 1      │
+│ 25      │ 'volatile int' │ 'volatile_var' │ 200                                                │ 1      │
+│ 26      │ 'volatile int' │ '200'          │ null                                               │ 1      │
+│ 27      │ 'int'          │ 'val'          │ 10                                                 │ 2      │
+│ 28      │ 'int'          │ '10'           │ null                                               │ 2      │
+│ 29      │ 'int'          │ 'val'          │ 20                                                 │ 2      │
+│ 30      │ 'int'          │ '20'           │ null                                               │ 2      │
+│ 31      │ 'int'          │ 'temp143'      │ null                                               │ 2      │
+│ 32      │ 'int'          │ 'i'            │ null                                               │ 2      │
+│ 33      │ 'int'          │ 'i'            │ null                                               │ 2      │
+│ 34      │ 'int'          │ 'temp595'      │ null                                               │ 1      │
+│ 35      │ '*'            │ 'ptr'          │ undefined                                          │ 1      │
+│ 36      │ 'int[][]'      │ 'matrix'       │ undefined                                          │ 1      │
+│ 37      │ 'int'          │ 'matrix'       │ null                                               │ 1      │
+│ 38      │ 'struct Data'  │ 'data1'        │ [ 1, undefined ]                                   │ 1      │
+│ 39      │ 'union Value'  │ 'val'          │ null                                               │ 1      │
+│ 40      │ 'enum Color'   │ 'color'        │ 'RED'                                              │ 1      │
+│ 41      │ 'enum Color'   │ 'RED'          │ null                                               │ 1      │
+│ 42      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
+│ 43      │ 'int'          │ '0'            │ null                                               │ 1      │
+│ 44      │ 'int'          │ 'count'        │ 0                                                  │ 1      │
+│ 45      │ 'int'          │ '0'            │ null                                               │ 1      │
+│ 46      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
+│ 47      │ 'int'          │ '0'            │ null                                               │ 1      │
+│ 48      │ 'register int' │ 'fast_var'     │ 30                                                 │ 1      │
+│ 49      │ 'register int' │ '30'           │ null                                               │ 1      │
+│ 50      │ 'int*'         │ 'arr'          │ null                                               │ 0      │
+│ 51      │ 'int'          │ 'size'         │ null                                               │ 0      │
+│ 52      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
+│ 53      │ 'int'          │ '0'            │ null                                               │ 1      │
+└─────────┴────────────────┴────────────────┴────────────────────────────────────────────────────┴────────┘
+
+Análise Semântica
+
+Erros semânticos encontrados:
+ [ "Variável 'val' não declarada" ]
+
+Atribuições encontradas: 5
+
+--- Atribuição #1 AST ---
+└─ =
+    ├─ i
+    └─ INT_LIT: 0
+        └─ 0
+
+--- Atribuição #1 TAC ---
+1: temp225 = i = 0
+
+
+--- Atribuição #2 AST ---
+└─ =
+    ├─ b
+    └─ +
+        ├─ *
+        │   ├─ *
+        │   │   ├─ IDF
+        │   │   └─ INT_LIT: 10
+        │   │       └─ 10
+        │   └─ IDF
+        └─ IDF
+
+--- Atribuição #2 TAC ---
+1: temp169 = b = temp699
+
+
+--- Atribuição #3 AST ---
+└─ =
+    ├─ MEMBER_ACCESS
+    │   ├─ val
+    │   └─ i
+    └─ INT_LIT: 10
+        └─ 10
+
+--- Atribuição #3 TAC ---
+1: temp461 = val.i = 10
+
+
+--- Atribuição #4 AST ---
+└─ =
+    ├─ count
+    └─ INT_LIT: 0
+        └─ 0
+
+--- Atribuição #4 TAC ---
+1: temp828 = count = 0
+
+
+--- Atribuição #5 AST ---
+└─ =
+    ├─ ARRAY_ACCESS
+    │   ├─ ptr
+    │   └─ IDF
+    └─ *
+        ├─ IDF
+        └─ INT_LIT: 10
+            └─ 10
+
+--- Atribuição #5 TAC ---
+1: temp493 = temp766 = temp907
+
+
+Códigos Three Address Code (TAC) gerados (global):
+0: temp879 = -20
+1: temp143 = val SUM x
+2: temp225 = i = 0
+3: temp763 = i < 10
+4: temp476 = i ++ 1
+5: temp463 = i MUL 10
+6: temp153 = temp463 MUL val
+7: temp699 = temp153 SUM x
+8: temp169 = b = temp699
+9: if temp225 goto -1
+10: temp595 = val SUM x
+11: temp515 = MALLOC_SIZEOF CALL MAX*sizeof(int)
+12: temp95 = temp515 CAST int*
+13: temp585 = ptr EQ NULL
+14: val.i = val MEMBER_ACCESS i
+15: temp461 = val.i = 10
+16: temp532 = x > 0
+17: temp613 = i < 5
+18: temp294 = i ++ 1
+19: if 0 goto -1
+20: temp935 = count < 3
+21: temp409 = count ++ 1
+22: if temp935 goto -1
+23: temp828 = count = 0
+24: temp354 = count ++ 1
+25: temp313 = count < 3
+26: if temp313 goto -1
+27: temp361 = i < 10
+28: temp515 = i ++ 1
+29: temp766 = ptr ARRAY_ACCESS i
+30: temp907 = i MUL 10
+31: temp493 = temp766 = temp907
+32: if 0 goto -1
+33: temp972 = i < size
+34: temp957 = i ++ 1
+35: temp373 = arr ARRAY_ACCESS i
+36: if 0 goto -1
+
+ASTs geradas (todas): 
+
+--- AST #1 ---
+└─ STRUCT_DEF
+    ├─ Data
+    └─ STRUCT_MEMBERS
+        ├─ STRUCT_MEMBER
+        │   ├─ int
+        │   └─ id
+        └─ STRUCT_ARRAY_MEMBER
+            ├─ char
+            └─ name
+--- AST #2 ---
+└─ UNION_DEF
+    ├─ Value
+    └─ STRUCT_MEMBERS
+        ├─ STRUCT_MEMBER
+        │   ├─ int
+        │   └─ i
+        └─ STRUCT_MEMBER
+            ├─ float
+            └─ f
+--- AST #3 ---
+└─ ENUM_DECL
+    ├─ Color
+    └─ ENUM_MEMBERS
+        ├─ ENUM_MEMBERS
+        │   ├─ ENUM_MEMBER
+        │   │   └─ RED
+        │   └─ ENUM_MEMBER
+        │       └─ GREEN
+        └─ ENUM_MEMBER
+            └─ BLUE
+--- AST #4 ---
+└─ VOID_FUNCTION_PROTOTYPE
+    ├─ printArray
+    └─ PARAMETER_LIST
+        ├─ POINTER_PARAMETER
+        │   ├─ int
+        │   └─ arr
+        └─ PARAMETER
+            ├─ int
+            └─ size
+--- AST #5 ---
+└─ ARRAY_INIT
+    ├─ int
+    └─ array
+--- AST #6 ---
+└─ =
+    ├─ x
+    └─ INT_LIT: 10
+        └─ 10
+--- AST #7 ---
+└─ =
+    ├─ w
+    └─ UNARY_MINUS
+        └─ INT_LIT: 20
+            └─ 20
+--- AST #8 ---
+└─ =
+    ├─ tt
+    └─ INT_LIT: 50
+        └─ 50
+--- AST #9 ---
+└─ =
+    ├─ rt
+    └─ INT_LIT: 100000
+        └─ 100000
+--- AST #10 ---
+└─ =
+    ├─ si
+    └─ INT_LIT: 5
+        └─ 5
+--- AST #11 ---
+└─ =
+    ├─ f
+    └─ F_LIT: 3.14
+        └─ 3.14
+--- AST #12 ---
+└─ =
+    ├─ d
+    └─ F_LIT: 2.718
+        └─ 2.718
+--- AST #13 ---
+└─ =
+    ├─ ch
+    └─ CHAR_LIT: 'A'
+        └─ 'A'
+--- AST #14 ---
+└─ =
+    ├─ constant_var
+    └─ INT_LIT: 500
+        └─ 500
+--- AST #15 ---
+└─ =
+    ├─ volatile_var
+    └─ INT_LIT: 200
+        └─ 200
+--- AST #16 ---
+└─ =
+    ├─ val
+    └─ INT_LIT: 10
+        └─ 10
+--- AST #17 ---
+└─ BLOCK
+    └─ =
+        ├─ val
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #18 ---
+└─ =
+    ├─ val
+    └─ INT_LIT: 20
+        └─ 20
+--- AST #19 ---
+└─ =
+    ├─ b
+    └─ +
+        ├─ IDF
+        └─ IDF
+--- AST #20 ---
+└─ DECL
+    ├─ int
+    └─ i
+--- AST #21 ---
+└─ =
+    ├─ b
+    └─ +
+        ├─ *
+        │   ├─ *
+        │   │   ├─ IDF
+        │   │   └─ INT_LIT: 10
+        │   │       └─ 10
+        │   └─ IDF
+        └─ IDF
+--- AST #22 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #23 ---
+└─ BLOCK
+    └─ =
+        ├─ val
+        └─ INT_LIT: 20
+            └─ 20
+--- AST #24 ---
+└─ =
+    ├─ teste
+    └─ +
+        ├─ IDF
+        └─ IDF
+--- AST #25 ---
+└─ POINTER_DECL
+    ├─ int
+    └─ =
+        ├─ ptr
+        └─ CAST_MALLOC
+            ├─ int*
+            └─ MALLOC_SIZEOF
+                ├─ MAX
+                └─ int
+--- AST #26 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Erro na alocação de memória\n"
+--- AST #27 ---
+└─ RETURN
+    └─ INT_LIT: 1
+        └─ 1
+--- AST #28 ---
+└─ IF
+    ├─ ==
+    │   ├─ ptr
+    │   └─ NULL
+    └─ BLOCK
+        └─ PRINTF
+            └─ STRING
+                └─ "Erro na alocação de memória\n"
+--- AST #29 ---
+└─ ARRAY2D_INIT
+    ├─ int
+    └─ matrix
+--- AST #30 ---
+└─ STRUCT_INIT_DECL
+    ├─ struct Data
+    └─ data1
+--- AST #31 ---
+└─ UNION_DECL
+    ├─ union Value
+    └─ val
+--- AST #32 ---
+└─ =
+    ├─ MEMBER_ACCESS
+    │   ├─ val
+    │   └─ i
+    └─ INT_LIT: 10
+        └─ 10
+--- AST #33 ---
+└─ =
+    ├─ color
+    └─ IDF
+--- AST #34 ---
+└─ PRINTF
+    └─ STRING
+        └─ "x é positivo.\n"
+--- AST #35 ---
+└─ PRINTF
+    └─ STRING
+        └─ "x é negativo ou zero.\n"
+--- AST #36 ---
+└─ IF_ELSE
+    ├─ >
+    │   ├─ x
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ BLOCK
+        └─ PRINTF
+            └─ STRING
+                └─ "x é positivo.\n"
+--- AST #37 ---
+└─ PRINTF
+    └─ STRING
+        └─ "A cor é Vermelho.\n"
+--- AST #38 ---
+└─ BREAK
+--- AST #39 ---
+└─ PRINTF
+    └─ STRING
+        └─ "A cor é Verde.\n"
+--- AST #40 ---
+└─ BREAK
+--- AST #41 ---
+└─ PRINTF
+    └─ STRING
+        └─ "A cor é Azul.\n"
+--- AST #42 ---
+└─ BREAK
+--- AST #43 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Cor desconhecida.\n"
+--- AST #44 ---
+└─ SWITCH
+    ├─ IDF
+    └─ CASE_LIST
+        ├─ CASE_LIST
+        │   ├─ CASE_LIST
+        │   │   ├─ CASE
+        │   │   │   ├─ IDF
+        │   │   │   │   └─ RED
+        │   │   │   └─ PRINTF
+        │   │   │       └─ STRING
+        │   │   │           └─ "A cor é Vermelho.\n"
+        │   │   └─ CASE
+        │   │       ├─ IDF
+        │   │       │   └─ GREEN
+        │   │       └─ PRINTF
+        │   │           └─ STRING
+        │   │               └─ "A cor é Verde.\n"
+        │   └─ CASE
+        │       ├─ IDF
+        │       │   └─ BLUE
+        │       └─ PRINTF
+        │           └─ STRING
+        │               └─ "A cor é Azul.\n"
+        └─ DEFAULT
+            └─ PRINTF
+                └─ STRING
+                    └─ "Cor desconhecida.\n"
+--- AST #45 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "For loop - Iteração %d\n"
+    └─ IDF
+--- AST #46 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ INT_LIT: 5
+            └─ 5
+--- AST #47 ---
+└─ =
+    ├─ count
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #48 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "While loop - Contagem: %d\n"
+    └─ IDF
+--- AST #49 ---
+└─ ++
+    └─ count
+--- AST #50 ---
+└─ WHILE
+    ├─ <
+    │   ├─ count
+    │   └─ INT_LIT: 3
+    │       └─ 3
+    └─ BLOCK
+        └─ PRINTF
+            ├─ STRING
+            │   └─ "While loop - Contagem: %d\n"
+            └─ IDF
+--- AST #51 ---
+└─ =
+    ├─ count
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #52 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "Do-while loop - Contagem: %d\n"
+    └─ IDF
+--- AST #53 ---
+└─ ++
+    └─ count
+--- AST #54 ---
+└─ DO_WHILE
+    ├─ BLOCK
+    │   └─ PRINTF
+    │       ├─ STRING
+    │       │   └─ "Do-while loop - Contagem: %d\n"
+    │       └─ IDF
+    └─ <
+        ├─ count
+        └─ INT_LIT: 3
+            └─ 3
+--- AST #55 ---
+└─ =
+    ├─ ARRAY_ACCESS
+    │   ├─ ptr
+    │   └─ IDF
+    └─ *
+        ├─ IDF
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #56 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #57 ---
+└─ FUNCTION_CALL
+    ├─ printArray
+    └─ ARG_LIST
+        ├─ IDF
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #58 ---
+└─ =
+    ├─ fast_var
+    └─ INT_LIT: 30
+        └─ 30
+--- AST #59 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "Variável registrada: %d\n"
+    └─ IDF
+--- AST #60 ---
+└─ FREE
+    └─ IDF
+--- AST #61 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Memória desalocada com sucesso.\n"
+--- AST #62 ---
+└─ RETURN
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #63 ---
+└─ MAIN_FUNCTION
+    ├─ int
+    └─ BLOCK
+        └─ ARRAY_INIT
+            ├─ int
+            └─ array
+--- AST #64 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Array dinâmico: "
+--- AST #65 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "%d "
+    └─ ARRAY_ACCESS
+        ├─ arr
+        └─ IDF
+--- AST #66 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ IDF
+--- AST #67 ---
+└─ PRINTF
+    └─ STRING
+        └─ "\n"
+--- AST #68 ---
+└─ VOID_FUNCTION
+    ├─ printArray
+    └─ PARAMETER_LIST
+        ├─ POINTER_PARAMETER
+        │   ├─ int
+        │   └─ arr
+        └─ PARAMETER
+            ├─ int
+            └─ size
+--- AST #69 ---
+└─ STRUCT_DEF
+    ├─ Data
+    └─ STRUCT_MEMBERS
+        ├─ STRUCT_MEMBER
+        │   ├─ int
+        │   └─ id
+        └─ STRUCT_ARRAY_MEMBER
+            ├─ char
+            └─ name
+Análise concluída com sucesso!
