@@ -104,7 +104,7 @@ case 1:
             console.log('\nAtribuições encontradas: ' + assignments.length + '\n');
             assignments.forEach((a, idx) => {
                 console.log('--- Atribuição #' + (idx+1) + ' AST ---');
-                try { printPosOrder(a.node, 1); } catch (e) { console.log(a.node); }
+                try { printAssignmentTree(a.node); } catch (e) { try { printPosOrder(a.node,1); } catch (e2) { console.log(a.node); } }
                 console.log('\n--- Atribuição #' + (idx+1) + ' TAC ---');
                 if (a.tac && a.tac.length > 0) {
                     a.tac.forEach((line, j) => {
@@ -127,7 +127,7 @@ case 1:
         console.log('\nASTs geradas (todas): \n');
         arvores.forEach((arvore, i) => {
             console.log('--- AST #' + (i+1) + ' ---');
-            try { printPosOrder(arvore.root, 1); } catch (e) { console.log(arvore.root); }
+            try { printAssignmentTree(arvore.root); } catch (e) { try { printPosOrder(arvore.root,1); } catch (e2) { console.log(arvore.root); } }
         });
     
 break;
@@ -1823,6 +1823,41 @@ parse: function parse(input) {
           }
       } else {
           console.log(treeLine + "- " + "undefined");
+      }
+  }
+
+  // Retorna um rótulo legível para o nó (ex: INT_LIT: 10)
+  function nodeLabel(node) {
+      if (!node) return 'null';
+      // Se nó for folha (sem filhos), imprime seu tipo (que pode ser o literal)
+      if ((node.leftChild === null || node.leftChild === undefined) && (node.rightChild === null || node.rightChild === undefined)) {
+          return String(node.type);
+      }
+      // Para nós do tipo INT_LIT/STRING_LIT/CHAR_LIT, mostrar o valor filho
+      if (node.type === 'INT_LIT' || node.type === 'F_LIT' || node.type === 'STRING_LIT' || node.type === 'CHAR_LIT' || node.type === 'IDF_LIT') {
+          if (node.leftChild && node.leftChild.type) return node.type + ': ' + node.leftChild.type;
+      }
+      return String(node.type || 'node');
+  }
+
+  // Impressão 'bonita' de árvore em ASCII para atribuições
+  function printAssignmentTree(node, indent = '', isLast = true) {
+      if (!node) return;
+      const label = nodeLabel(node);
+      const pointer = isLast ? '└─ ' : '├─ ';
+      console.log(indent + pointer + label);
+
+      // Coletar filhos não-nulos em ordem (esquerda, direita)
+      const children = [];
+      if (node.leftChild !== null && node.leftChild !== undefined) children.push(node.leftChild);
+      if (node.rightChild !== null && node.rightChild !== undefined) children.push(node.rightChild);
+
+      for (let i = 0; i < children.length; i++) {
+          const child = children[i];
+          const last = i === children.length - 1;
+          // Para linhas internas, mantemos as barras verticais
+          const newIndent = indent + (isLast ? '    ' : '│   ');
+          printAssignmentTree(child, newIndent, last);
       }
   }
 
