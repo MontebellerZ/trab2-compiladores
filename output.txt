@@ -566,7 +566,7 @@ Tabela de símbolos:
 │ 7       │ 'int'          │ 'x'            │ 10                                                 │ 1      │
 │ 8       │ 'int'          │ '10'           │ null                                               │ 1      │
 │ 9       │ 'signed int'   │ 'w'            │ -20                                                │ 1      │
-│ 10      │ 'signed int'   │ 'temp879'      │ null                                               │ 1      │
+│ 10      │ 'signed int'   │ 'temp678'      │ null                                               │ 1      │
 │ 11      │ 'unsigned int' │ 'tt'           │ 50                                                 │ 1      │
 │ 12      │ 'unsigned int' │ '50'           │ null                                               │ 1      │
 │ 13      │ 'long int'     │ 'rt'           │ 100000                                             │ 1      │
@@ -587,10 +587,10 @@ Tabela de símbolos:
 │ 28      │ 'int'          │ '10'           │ null                                               │ 2      │
 │ 29      │ 'int'          │ 'val'          │ 20                                                 │ 2      │
 │ 30      │ 'int'          │ '20'           │ null                                               │ 2      │
-│ 31      │ 'int'          │ 'temp143'      │ null                                               │ 2      │
+│ 31      │ 'int'          │ 'temp901'      │ null                                               │ 2      │
 │ 32      │ 'int'          │ 'i'            │ null                                               │ 2      │
 │ 33      │ 'int'          │ 'i'            │ null                                               │ 2      │
-│ 34      │ 'int'          │ 'temp595'      │ null                                               │ 1      │
+│ 34      │ 'int'          │ 'temp119'      │ null                                               │ 1      │
 │ 35      │ '*'            │ 'ptr'          │ undefined                                          │ 1      │
 │ 36      │ 'int[][]'      │ 'matrix'       │ undefined                                          │ 1      │
 │ 37      │ 'int'          │ 'matrix'       │ null                                               │ 1      │
@@ -626,7 +626,7 @@ Atribuições encontradas: 5
         └─ 0
 
 --- Atribuição #1 TAC ---
-1: temp225 = i = 0
+1: temp144 = i = 0
 
 
 --- Atribuição #2 AST ---
@@ -642,7 +642,7 @@ Atribuições encontradas: 5
         └─ IDF
 
 --- Atribuição #2 TAC ---
-1: temp169 = b = temp699
+1: temp918 = b = temp88
 
 
 --- Atribuição #3 AST ---
@@ -654,7 +654,7 @@ Atribuições encontradas: 5
         └─ 10
 
 --- Atribuição #3 TAC ---
-1: temp461 = val.i = 10
+1: temp855 = val.i = 10
 
 
 --- Atribuição #4 AST ---
@@ -664,7 +664,7 @@ Atribuições encontradas: 5
         └─ 0
 
 --- Atribuição #4 TAC ---
-1: temp828 = count = 0
+1: temp647 = count = 0
 
 
 --- Atribuição #5 AST ---
@@ -678,46 +678,46 @@ Atribuições encontradas: 5
             └─ 10
 
 --- Atribuição #5 TAC ---
-1: temp493 = temp766 = temp907
+1: temp102 = temp285 = temp138
 
 
 Códigos Three Address Code (TAC) gerados (global):
-0: temp879 = -20
-1: temp143 = val SUM x
-2: temp225 = i = 0
-3: temp763 = i < 10
-4: temp476 = i ++ 1
-5: temp463 = i MUL 10
-6: temp153 = temp463 MUL val
-7: temp699 = temp153 SUM x
-8: temp169 = b = temp699
-9: if temp225 goto -1
-10: temp595 = val SUM x
-11: temp515 = MALLOC_SIZEOF CALL MAX*sizeof(int)
-12: temp95 = temp515 CAST int*
-13: temp585 = ptr EQ NULL
+0: temp678 = -20
+1: temp901 = val SUM x
+2: temp144 = i = 0
+3: temp326 = i < 10
+4: temp279 = i ++ 1
+5: temp660 = i MUL 10
+6: temp588 = temp660 MUL val
+7: temp88 = temp588 SUM x
+8: temp918 = b = temp88
+9: if temp144 goto -1
+10: temp119 = val SUM x
+11: temp411 = MALLOC_SIZEOF CALL MAX*sizeof(int)
+12: temp603 = temp411 CAST int*
+13: temp543 = ptr EQ NULL
 14: val.i = val MEMBER_ACCESS i
-15: temp461 = val.i = 10
-16: temp532 = x > 0
-17: temp613 = i < 5
-18: temp294 = i ++ 1
+15: temp855 = val.i = 10
+16: temp83 = x > 0
+17: temp409 = i < 5
+18: temp562 = i ++ 1
 19: if 0 goto -1
-20: temp935 = count < 3
-21: temp409 = count ++ 1
-22: if temp935 goto -1
-23: temp828 = count = 0
-24: temp354 = count ++ 1
-25: temp313 = count < 3
-26: if temp313 goto -1
-27: temp361 = i < 10
-28: temp515 = i ++ 1
-29: temp766 = ptr ARRAY_ACCESS i
-30: temp907 = i MUL 10
-31: temp493 = temp766 = temp907
+20: temp109 = count < 3
+21: temp360 = count ++ 1
+22: if temp109 goto -1
+23: temp647 = count = 0
+24: temp800 = count ++ 1
+25: temp630 = count < 3
+26: if temp630 goto -1
+27: temp77 = i < 10
+28: temp600 = i ++ 1
+29: temp285 = ptr ARRAY_ACCESS i
+30: temp138 = i MUL 10
+31: temp102 = temp285 = temp138
 32: if 0 goto -1
-33: temp972 = i < size
-34: temp957 = i ++ 1
-35: temp373 = arr ARRAY_ACCESS i
+33: temp136 = i < size
+34: temp777 = i ++ 1
+35: temp549 = arr ARRAY_ACCESS i
 36: if 0 goto -1
 
 ASTs geradas (todas): 

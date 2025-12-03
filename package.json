@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "analisador.js",
   "scripts": {
-    "start": "node analisador.js entradas/entrada_05.txt > output.txt"
+    "start": "node analisador.js entradas/entrada_05.txt > output.txt",
+    "start1": "node analisador.js entradas/entrada_05.txt > output.txt",
+    "start2": "node analisador.js entradas/entrada_05.txt > output.txt",
+    "start3": "node analisador.js entradas/entrada_05.txt > output.txt",
+    "start4": "node analisador.js entradas/entrada_05.txt > output.txt",
+    "start5": "node analisador.js entradas/entrada_05.txt > output.txt"
   },
   "repository": {
     "type": "git",
