@@ -4,11 +4,11 @@
   "main": "analisador.js",
   "scripts": {
     "start": "node analisador.js entradas/entrada_05.txt > output.txt",
-    "start1": "node analisador.js entradas/entrada_05.txt > output.txt",
-    "start2": "node analisador.js entradas/entrada_05.txt > output.txt",
-    "start3": "node analisador.js entradas/entrada_05.txt > output.txt",
-    "start4": "node analisador.js entradas/entrada_05.txt > output.txt",
-    "start5": "node analisador.js entradas/entrada_05.txt > output.txt"
+    "start1": "node analisador.js entradas/entrada_01.txt > output_01.txt",
+    "start2": "node analisador.js entradas/entrada_02.txt > output_02.txt",
+    "start3": "node analisador.js entradas/entrada_03.txt > output_03.txt",
+    "start4": "node analisador.js entradas/entrada_04.txt > output_04.txt",
+    "start5": "node analisador.js entradas/entrada_05.txt > output_05.txt"
   },
   "repository": {
     "type": "git",

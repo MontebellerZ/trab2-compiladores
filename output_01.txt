@@ -1,0 +1,530 @@
+Iniciando análise...
+Arquivo entradas/entrada_01.txt lido com sucesso.
+Iniciando parse...
+Token LBRACE
+Token INT
+Token IDF
+Token LBRACKET
+Token INT_LIT
+Token RBRACKET
+Token ASSIGN
+Token LBRACE
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token COMMA
+Token INT_LIT
+Token RBRACE
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token INT
+Token IDF
+Token COMMA
+Token IDF
+Token SEMICOLON
+Token INT
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token FOR
+Token LPAREN
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token IDF
+Token ADD_ASSIGN
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token SEMICOLON
+Token IF
+Token LPAREN
+Token LPAREN
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token MOD
+Token INT_LIT
+Token EQ
+Token INT_LIT
+Token RPAREN
+Token AND
+Token LPAREN
+Token IDF
+Token GT
+Token INT_LIT
+Token OR
+Token LPAREN
+Token IDF
+Token LE
+Token INT_LIT
+Token RPAREN
+Token RPAREN
+Token RPAREN
+Token LBRACE
+Token IDF
+Token INC
+Token SEMICOLON
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token ELSE
+Token LBRACE
+Token IDF
+Token INC
+Token SEMICOLON
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token FOR
+Token LPAREN
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token SEMICOLON
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token IDF
+Token INC
+Token SEMICOLON
+Token WHILE
+Token LPAREN
+Token IDF
+Token GT
+Token INT_LIT
+Token RPAREN
+Token FLOAT
+Token IDF
+Token ASSIGN
+Token F_LIT
+Token SEMICOLON
+Token RBRACE
+Token RBRACE
+Token WHILE
+Token LPAREN
+Token IDF
+Token GT
+Token INT_LIT
+Token RPAREN
+Token LBRACE
+Token IDF
+Token DEC
+Token SEMICOLON
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token DO
+Token LBRACE
+Token IDF
+Token DEC
+Token SEMICOLON
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token WHILE
+Token LPAREN
+Token IDF
+Token GT
+Token SUB
+Token INT_LIT
+Token RPAREN
+Token SEMICOLON
+Token IF
+Token LPAREN
+Token IDF
+Token EQ
+Token SUB
+Token INT_LIT
+Token RPAREN
+Token LBRACE
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token ELSE
+Token LBRACE
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token RBRACE
+Token EOF
+Análise Sintática concluída com sucesso!
+
+Tabela de símbolos:
+┌─────────┬─────────┬──────────────┬────────────────────────────────────────────────────┬────────┐
+│ (index) │ tipo    │ id           │ val                                                │ escopo │
+├─────────┼─────────┼──────────────┼────────────────────────────────────────────────────┼────────┤
+│ 0       │ 'int[]' │ 'array'      │ [ [Object], [Object], [Object], ... 2 more items ] │ 1      │
+│ 1       │ 'int'   │ 'array'      │ null                                               │ 1      │
+│ 2       │ 'int'   │ 'even_count' │ 0                                                  │ 1      │
+│ 3       │ 'int'   │ '0'          │ null                                               │ 1      │
+│ 4       │ 'int'   │ 'odd_count'  │ 0                                                  │ 1      │
+│ 5       │ 'int'   │ '0'          │ null                                               │ 1      │
+│ 6       │ 'int'   │ 'sum'        │ 0                                                  │ 1      │
+│ 7       │ 'int'   │ '0'          │ null                                               │ 1      │
+│ 8       │ 'int'   │ 'i'          │ null                                               │ 1      │
+│ 9       │ 'int'   │ 'j'          │ null                                               │ 1      │
+│ 10      │ 'int'   │ 'i,j'        │ null                                               │ 1      │
+│ 11      │ 'int'   │ 'flag'       │ 0                                                  │ 1      │
+│ 12      │ 'int'   │ '0'          │ null                                               │ 1      │
+│ 13      │ 'float' │ 'nada'       │ 12.34                                              │ 3      │
+│ 14      │ 'float' │ '12.34'      │ null                                               │ 3      │
+└─────────┴─────────┴──────────────┴────────────────────────────────────────────────────┴────────┘
+
+Análise Semântica
+
+Sem erros semânticos encontrados.
+
+
+Atribuições encontradas: 8
+
+--- Atribuição #1 AST ---
+└─ =
+    ├─ i
+    └─ INT_LIT: 0
+        └─ 0
+
+--- Atribuição #1 TAC ---
+1: temp830 = i = 0
+
+
+--- Atribuição #2 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 1
+        └─ 1
+
+--- Atribuição #2 TAC ---
+1: temp891 = flag = 1
+
+
+--- Atribuição #3 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 2
+        └─ 2
+
+--- Atribuição #3 TAC ---
+1: temp694 = flag = 2
+
+
+--- Atribuição #4 AST ---
+└─ =
+    ├─ j
+    └─ INT_LIT: 0
+        └─ 0
+
+--- Atribuição #4 TAC ---
+1: temp368 = j = 0
+
+
+--- Atribuição #5 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 3
+        └─ 3
+
+--- Atribuição #5 TAC ---
+1: temp790 = flag = 3
+
+
+--- Atribuição #6 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 4
+        └─ 4
+
+--- Atribuição #6 TAC ---
+1: temp865 = flag = 4
+
+
+--- Atribuição #7 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 5
+        └─ 5
+
+--- Atribuição #7 TAC ---
+1: temp666 = flag = 5
+
+
+--- Atribuição #8 AST ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 6
+        └─ 6
+
+--- Atribuição #8 TAC ---
+1: temp911 = flag = 6
+
+
+Códigos Three Address Code (TAC) gerados (global):
+0: temp830 = i = 0
+1: temp184 = i < 5
+2: temp756 = i ++ 1
+3: temp333 = array ARRAY_ACCESS i
+4: temp13 = sum += temp333
+5: temp730 = array ARRAY_ACCESS i
+6: temp45 = temp730 MOD 2
+7: temp9 = temp45 == 0
+8: temp679 = sum > 10
+9: temp906 = sum <= 300
+10: temp936 = temp679 OR temp906
+11: temp819 = temp9 AND temp936
+12: temp932 = even_count ++ 1
+13: temp891 = flag = 1
+14: temp21 = odd_count ++ 1
+15: temp694 = flag = 2
+16: temp368 = j = 0
+17: temp625 = array ARRAY_ACCESS i
+18: temp634 = j < temp625
+19: temp661 = j ++ 1
+20: temp367 = flag ++ 1
+21: temp222 = j > 1
+22: if temp222 goto -1
+23: if temp368 goto -1
+24: if temp830 goto -1
+25: temp28 = sum > 0
+26: temp59 = sum -- 1
+27: temp790 = flag = 3
+28: if temp28 goto -1
+29: temp99 = sum -- 1
+30: temp865 = flag = 4
+31: temp91 = -5
+32: temp510 = sum > temp91
+33: if temp510 goto -1
+34: temp904 = sum EQ -5
+35: temp666 = flag = 5
+36: temp911 = flag = 6
+
+ASTs geradas (todas): 
+
+--- AST #1 ---
+└─ ARRAY_INIT
+    ├─ int
+    └─ array
+--- AST #2 ---
+└─ =
+    ├─ even_count
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #3 ---
+└─ =
+    ├─ odd_count
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #4 ---
+└─ =
+    ├─ sum
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #5 ---
+└─ MULTI_DECL
+    ├─ DECL
+    │   ├─ int
+    │   └─ i
+    └─ j
+--- AST #6 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #7 ---
+└─ +=
+    ├─ sum
+    └─ ARRAY_ACCESS
+        ├─ array
+        └─ IDF
+--- AST #8 ---
+└─ ++
+    └─ even_count
+--- AST #9 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 1
+        └─ 1
+--- AST #10 ---
+└─ ++
+    └─ odd_count
+--- AST #11 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 2
+        └─ 2
+--- AST #12 ---
+└─ IF_ELSE
+    ├─ AND
+    │   ├─ ==
+    │   │   ├─ %
+    │   │   │   ├─ ARRAY_ACCESS
+    │   │   │   │   ├─ array
+    │   │   │   │   └─ IDF
+    │   │   │   └─ INT_LIT: 2
+    │   │   │       └─ 2
+    │   │   └─ INT_LIT: 0
+    │   │       └─ 0
+    │   └─ OR
+    │       ├─ >
+    │       │   ├─ sum
+    │       │   └─ INT_LIT: 10
+    │       │       └─ 10
+    │       └─ <=
+    │           ├─ sum
+    │           └─ INT_LIT: 300
+    │               └─ 300
+    └─ BLOCK
+        └─ ++
+            └─ even_count
+--- AST #13 ---
+└─ ++
+    └─ flag
+--- AST #14 ---
+└─ WHILE
+    ├─ >
+    │   ├─ j
+    │   └─ INT_LIT: 1
+    │       └─ 1
+    └─ =
+        ├─ nada
+        └─ F_LIT: 12.34
+            └─ 12.34
+--- AST #15 ---
+└─ FOR
+    ├─ =
+    │   ├─ j
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ j
+        └─ ARRAY_ACCESS
+            ├─ array
+            └─ IDF
+--- AST #16 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ INT_LIT: 5
+            └─ 5
+--- AST #17 ---
+└─ --
+    └─ sum
+--- AST #18 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 3
+        └─ 3
+--- AST #19 ---
+└─ WHILE
+    ├─ >
+    │   ├─ sum
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ BLOCK
+        └─ --
+            └─ sum
+--- AST #20 ---
+└─ --
+    └─ sum
+--- AST #21 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 4
+        └─ 4
+--- AST #22 ---
+└─ DO_WHILE
+    ├─ BLOCK
+    │   └─ --
+    │       └─ sum
+    └─ >
+        ├─ sum
+        └─ UNARY_MINUS
+            └─ INT_LIT: 5
+                └─ 5
+--- AST #23 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 5
+        └─ 5
+--- AST #24 ---
+└─ =
+    ├─ flag
+    └─ INT_LIT: 6
+        └─ 6
+--- AST #25 ---
+└─ IF_ELSE
+    ├─ ==
+    │   ├─ sum
+    │   └─ -5
+    └─ BLOCK
+        └─ =
+            ├─ flag
+            └─ INT_LIT: 5
+                └─ 5
+--- AST #26 ---
+└─ BLOCK
+    └─ ARRAY_INIT
+        ├─ int
+        └─ array
+--- AST #27 ---
+└─ BLOCK
+    └─ ARRAY_INIT
+        ├─ int
+        └─ array
+Análise concluída com sucesso!

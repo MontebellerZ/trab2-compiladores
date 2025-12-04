@@ -1,5 +1,5 @@
 Iniciando análise...
-Arquivo entradas/entrada_05.txt lido com sucesso.
+Arquivo entradas/entrada_04.txt lido com sucesso.
 Iniciando parse...
 Token INCLUDE
 Token LT
@@ -138,69 +138,6 @@ Token IDF
 Token ASSIGN
 Token INT_LIT
 Token SEMICOLON
-Token LBRACE
-Token INT
-Token IDF
-Token ASSIGN
-Token INT_LIT
-Token SEMICOLON
-Token RBRACE
-Token LBRACE
-Token INT
-Token IDF
-Token ASSIGN
-Token INT_LIT
-Token SEMICOLON
-Token INT
-Token IDF
-Token ASSIGN
-Token IDF
-Token SUM
-FATOR: val
-Token IDF
-Token SEMICOLON
-FATOR: x
-Token INT
-Token IDF
-Token SEMICOLON
-Token FOR
-Token LPAREN
-Token IDF
-Token ASSIGN
-Token INT_LIT
-Token SEMICOLON
-Token IDF
-Token LT
-Token INT_LIT
-Token SEMICOLON
-Token IDF
-Token INC
-Token RPAREN
-Token LBRACE
-Token IDF
-Token ASSIGN
-Token IDF
-Token MUL
-FATOR: i
-Token INT_LIT
-Token MUL
-Token IDF
-Token SUM
-FATOR: val
-Token IDF
-Token SEMICOLON
-FATOR: x
-Token RBRACE
-Token RBRACE
-Token INT
-Token IDF
-Token ASSIGN
-Token IDF
-Token SUM
-FATOR: val
-Token IDF
-Token SEMICOLON
-FATOR: x
 Token INT
 Token MUL
 Token IDF
@@ -484,6 +421,24 @@ Token IDF
 Token RPAREN
 FATOR: fast_var
 Token SEMICOLON
+Token TYPEDEF
+Token UNSIGNED
+Token LONG
+Token IDF
+Token SEMICOLON
+Token IDF
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "ULong: %lu\n"
+Token COMMA
+Token IDF
+Token RPAREN
+FATOR: bigNum
+Token SEMICOLON
 Token FREE
 Token LPAREN
 Token IDF
@@ -553,99 +508,67 @@ Token EOF
 Análise Sintática concluída com sucesso!
 
 Tabela de símbolos:
-┌─────────┬────────────────┬────────────────┬────────────────────────────────────────────────────┬────────┐
-│ (index) │ tipo           │ id             │ val                                                │ escopo │
-├─────────┼────────────────┼────────────────┼────────────────────────────────────────────────────┼────────┤
-│ 0       │ 'enum Color'   │ 'RED'          │ 'RED'                                              │ 0      │
-│ 1       │ 'enum Color'   │ 'GREEN'        │ 'GREEN'                                            │ 0      │
-│ 2       │ 'enum Color'   │ 'BLUE'         │ 'BLUE'                                             │ 0      │
-│ 3       │ 'int*'         │ 'arr'          │ null                                               │ 0      │
-│ 4       │ 'int'          │ 'size'         │ null                                               │ 0      │
-│ 5       │ 'int[]'        │ 'array'        │ [ [Object], [Object], [Object], ... 2 more items ] │ 1      │
-│ 6       │ 'int'          │ 'array'        │ null                                               │ 1      │
-│ 7       │ 'int'          │ 'x'            │ 10                                                 │ 1      │
-│ 8       │ 'int'          │ '10'           │ null                                               │ 1      │
-│ 9       │ 'signed int'   │ 'w'            │ -20                                                │ 1      │
-│ 10      │ 'signed int'   │ 'temp512'      │ null                                               │ 1      │
-│ 11      │ 'unsigned int' │ 'tt'           │ 50                                                 │ 1      │
-│ 12      │ 'unsigned int' │ '50'           │ null                                               │ 1      │
-│ 13      │ 'long int'     │ 'rt'           │ 100000                                             │ 1      │
-│ 14      │ 'long int'     │ '100000'       │ null                                               │ 1      │
-│ 15      │ 'short int'    │ 'si'           │ 5                                                  │ 1      │
-│ 16      │ 'short int'    │ '5'            │ null                                               │ 1      │
-│ 17      │ 'float'        │ 'f'            │ 3.14                                               │ 1      │
-│ 18      │ 'float'        │ '3.14'         │ null                                               │ 1      │
-│ 19      │ 'double'       │ 'd'            │ 2.718                                              │ 1      │
-│ 20      │ 'double'       │ '2.718'        │ null                                               │ 1      │
-│ 21      │ 'char'         │ 'ch'           │ 65                                                 │ 1      │
-│ 22      │ 'char'         │ "'A'"          │ null                                               │ 1      │
-│ 23      │ 'const int'    │ 'constant_var' │ 500                                                │ 1      │
-│ 24      │ 'const int'    │ '500'          │ null                                               │ 1      │
-│ 25      │ 'volatile int' │ 'volatile_var' │ 200                                                │ 1      │
-│ 26      │ 'volatile int' │ '200'          │ null                                               │ 1      │
-│ 27      │ 'int'          │ 'val'          │ 10                                                 │ 2      │
-│ 28      │ 'int'          │ '10'           │ null                                               │ 2      │
-│ 29      │ 'int'          │ 'val'          │ 20                                                 │ 2      │
-│ 30      │ 'int'          │ '20'           │ null                                               │ 2      │
-│ 31      │ 'int'          │ 'temp175'      │ null                                               │ 2      │
-│ 32      │ 'int'          │ 'i'            │ null                                               │ 2      │
-│ 33      │ 'int'          │ 'i'            │ null                                               │ 2      │
-│ 34      │ 'int'          │ 'temp588'      │ null                                               │ 1      │
-│ 35      │ '*'            │ 'ptr'          │ undefined                                          │ 1      │
-│ 36      │ 'int[][]'      │ 'matrix'       │ undefined                                          │ 1      │
-│ 37      │ 'int'          │ 'matrix'       │ null                                               │ 1      │
-│ 38      │ 'struct Data'  │ 'data1'        │ [ 1, undefined ]                                   │ 1      │
-│ 39      │ 'union Value'  │ 'val'          │ null                                               │ 1      │
-│ 40      │ 'enum Color'   │ 'color'        │ 'RED'                                              │ 1      │
-│ 41      │ 'enum Color'   │ 'RED'          │ null                                               │ 1      │
-│ 42      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
-│ 43      │ 'int'          │ '0'            │ null                                               │ 1      │
-│ 44      │ 'int'          │ 'count'        │ 0                                                  │ 1      │
-│ 45      │ 'int'          │ '0'            │ null                                               │ 1      │
-│ 46      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
-│ 47      │ 'int'          │ '0'            │ null                                               │ 1      │
-│ 48      │ 'register int' │ 'fast_var'     │ 30                                                 │ 1      │
-│ 49      │ 'register int' │ '30'           │ null                                               │ 1      │
-│ 50      │ 'int*'         │ 'arr'          │ null                                               │ 0      │
-│ 51      │ 'int'          │ 'size'         │ null                                               │ 0      │
-│ 52      │ 'int'          │ 'i'            │ 0                                                  │ 1      │
-│ 53      │ 'int'          │ '0'            │ null                                               │ 1      │
-└─────────┴────────────────┴────────────────┴────────────────────────────────────────────────────┴────────┘
+┌─────────┬─────────────────┬────────────────┬────────────────────────────────────────────────────┬────────┐
+│ (index) │ tipo            │ id             │ val                                                │ escopo │
+├─────────┼─────────────────┼────────────────┼────────────────────────────────────────────────────┼────────┤
+│ 0       │ 'enum Color'    │ 'RED'          │ 'RED'                                              │ 0      │
+│ 1       │ 'enum Color'    │ 'GREEN'        │ 'GREEN'                                            │ 0      │
+│ 2       │ 'enum Color'    │ 'BLUE'         │ 'BLUE'                                             │ 0      │
+│ 3       │ 'int*'          │ 'arr'          │ null                                               │ 0      │
+│ 4       │ 'int'           │ 'size'         │ null                                               │ 0      │
+│ 5       │ 'int[]'         │ 'array'        │ [ [Object], [Object], [Object], ... 2 more items ] │ 1      │
+│ 6       │ 'int'           │ 'array'        │ null                                               │ 1      │
+│ 7       │ 'int'           │ 'x'            │ 10                                                 │ 1      │
+│ 8       │ 'int'           │ '10'           │ null                                               │ 1      │
+│ 9       │ 'signed int'    │ 'w'            │ -20                                                │ 1      │
+│ 10      │ 'signed int'    │ 'temp111'      │ null                                               │ 1      │
+│ 11      │ 'unsigned int'  │ 'tt'           │ 50                                                 │ 1      │
+│ 12      │ 'unsigned int'  │ '50'           │ null                                               │ 1      │
+│ 13      │ 'long int'      │ 'rt'           │ 100000                                             │ 1      │
+│ 14      │ 'long int'      │ '100000'       │ null                                               │ 1      │
+│ 15      │ 'short int'     │ 'si'           │ 5                                                  │ 1      │
+│ 16      │ 'short int'     │ '5'            │ null                                               │ 1      │
+│ 17      │ 'float'         │ 'f'            │ 3.14                                               │ 1      │
+│ 18      │ 'float'         │ '3.14'         │ null                                               │ 1      │
+│ 19      │ 'double'        │ 'd'            │ 2.718                                              │ 1      │
+│ 20      │ 'double'        │ '2.718'        │ null                                               │ 1      │
+│ 21      │ 'char'          │ 'ch'           │ 65                                                 │ 1      │
+│ 22      │ 'char'          │ "'A'"          │ null                                               │ 1      │
+│ 23      │ 'const int'     │ 'constant_var' │ 500                                                │ 1      │
+│ 24      │ 'const int'     │ '500'          │ null                                               │ 1      │
+│ 25      │ 'volatile int'  │ 'volatile_var' │ 200                                                │ 1      │
+│ 26      │ 'volatile int'  │ '200'          │ null                                               │ 1      │
+│ 27      │ '*'             │ 'ptr'          │ undefined                                          │ 1      │
+│ 28      │ 'int[][]'       │ 'matrix'       │ undefined                                          │ 1      │
+│ 29      │ 'int'           │ 'matrix'       │ null                                               │ 1      │
+│ 30      │ 'struct Data'   │ 'data1'        │ [ 1, undefined ]                                   │ 1      │
+│ 31      │ 'union Value'   │ 'val'          │ null                                               │ 1      │
+│ 32      │ 'enum Color'    │ 'color'        │ 'RED'                                              │ 1      │
+│ 33      │ 'enum Color'    │ 'RED'          │ null                                               │ 1      │
+│ 34      │ 'int'           │ 'i'            │ 0                                                  │ 1      │
+│ 35      │ 'int'           │ '0'            │ null                                               │ 1      │
+│ 36      │ 'int'           │ 'count'        │ 0                                                  │ 1      │
+│ 37      │ 'int'           │ '0'            │ null                                               │ 1      │
+│ 38      │ 'int'           │ 'i'            │ 0                                                  │ 1      │
+│ 39      │ 'int'           │ '0'            │ null                                               │ 1      │
+│ 40      │ 'register int'  │ 'fast_var'     │ 30                                                 │ 1      │
+│ 41      │ 'register int'  │ '30'           │ null                                               │ 1      │
+│ 42      │ 'unsigned long' │ 'bigNum'       │ 123456789                                          │ 1      │
+│ 43      │ 'unsigned long' │ '123456789'    │ null                                               │ 1      │
+│ 44      │ 'int*'          │ 'arr'          │ null                                               │ 0      │
+│ 45      │ 'int'           │ 'size'         │ null                                               │ 0      │
+│ 46      │ 'int'           │ 'i'            │ 0                                                  │ 1      │
+│ 47      │ 'int'           │ '0'            │ null                                               │ 1      │
+└─────────┴─────────────────┴────────────────┴────────────────────────────────────────────────────┴────────┘
 
 Análise Semântica
 
-Erros semânticos encontrados:
- [ "Variável 'val' não declarada" ]
+Sem erros semânticos encontrados.
 
-Atribuições encontradas: 5
+
+Atribuições encontradas: 3
 
 --- Atribuição #1 AST ---
-└─ =
-    ├─ i
-    └─ INT_LIT: 0
-        └─ 0
-
---- Atribuição #1 TAC ---
-1: temp949 = i = 0
-
-
---- Atribuição #2 AST ---
-└─ =
-    ├─ b
-    └─ +
-        ├─ *
-        │   ├─ *
-        │   │   ├─ IDF
-        │   │   └─ INT_LIT: 10
-        │   │       └─ 10
-        │   └─ IDF
-        └─ IDF
-
---- Atribuição #2 TAC ---
-1: temp864 = b = temp841
-
-
---- Atribuição #3 AST ---
 └─ =
     ├─ MEMBER_ACCESS
     │   ├─ val
@@ -653,21 +576,21 @@ Atribuições encontradas: 5
     └─ INT_LIT: 10
         └─ 10
 
---- Atribuição #3 TAC ---
-1: temp871 = val.i = 10
+--- Atribuição #1 TAC ---
+1: temp148 = val.i = 10
 
 
---- Atribuição #4 AST ---
+--- Atribuição #2 AST ---
 └─ =
     ├─ count
     └─ INT_LIT: 0
         └─ 0
 
---- Atribuição #4 TAC ---
-1: temp4 = count = 0
+--- Atribuição #2 TAC ---
+1: temp259 = count = 0
 
 
---- Atribuição #5 AST ---
+--- Atribuição #3 AST ---
 └─ =
     ├─ ARRAY_ACCESS
     │   ├─ ptr
@@ -677,48 +600,38 @@ Atribuições encontradas: 5
         └─ INT_LIT: 10
             └─ 10
 
---- Atribuição #5 TAC ---
-1: temp7 = temp749 = temp921
+--- Atribuição #3 TAC ---
+1: temp568 = temp849 = temp876
 
 
 Códigos Three Address Code (TAC) gerados (global):
-0: temp512 = -20
-1: temp175 = val SUM x
-2: temp949 = i = 0
-3: temp434 = i < 10
-4: temp736 = i ++ 1
-5: temp896 = i MUL 10
-6: temp712 = temp896 MUL val
-7: temp841 = temp712 SUM x
-8: temp864 = b = temp841
-9: if temp949 goto -1
-10: temp588 = val SUM x
-11: temp897 = MALLOC_SIZEOF CALL MAX*sizeof(int)
-12: temp528 = temp897 CAST int*
-13: temp650 = ptr EQ NULL
-14: val.i = val MEMBER_ACCESS i
-15: temp871 = val.i = 10
-16: temp930 = x > 0
-17: temp929 = i < 5
-18: temp109 = i ++ 1
-19: if 0 goto -1
-20: temp773 = count < 3
-21: temp48 = count ++ 1
-22: if temp773 goto -1
-23: temp4 = count = 0
-24: temp992 = count ++ 1
-25: temp179 = count < 3
-26: if temp179 goto -1
-27: temp605 = i < 10
-28: temp427 = i ++ 1
-29: temp749 = ptr ARRAY_ACCESS i
-30: temp921 = i MUL 10
-31: temp7 = temp749 = temp921
-32: if 0 goto -1
-33: temp750 = i < size
-34: temp524 = i ++ 1
-35: temp382 = arr ARRAY_ACCESS i
-36: if 0 goto -1
+0: temp111 = -20
+1: temp468 = MALLOC_SIZEOF CALL MAX*sizeof(int)
+2: temp474 = temp468 CAST int*
+3: temp932 = ptr EQ NULL
+4: val.i = val MEMBER_ACCESS i
+5: temp148 = val.i = 10
+6: temp843 = x > 0
+7: temp612 = i < 5
+8: temp365 = i ++ 1
+9: if 0 goto -1
+10: temp355 = count < 3
+11: temp777 = count ++ 1
+12: if temp355 goto -1
+13: temp259 = count = 0
+14: temp633 = count ++ 1
+15: temp565 = count < 3
+16: if temp565 goto -1
+17: temp722 = i < 10
+18: temp328 = i ++ 1
+19: temp849 = ptr ARRAY_ACCESS i
+20: temp876 = i MUL 10
+21: temp568 = temp849 = temp876
+22: if 0 goto -1
+23: temp158 = i < size
+24: temp156 = i ++ 1
+25: temp312 = arr ARRAY_ACCESS i
+26: if 0 goto -1
 
 ASTs geradas (todas): 
 
@@ -819,65 +732,6 @@ ASTs geradas (todas):
     └─ INT_LIT: 200
         └─ 200
 --- AST #16 ---
-└─ =
-    ├─ val
-    └─ INT_LIT: 10
-        └─ 10
---- AST #17 ---
-└─ BLOCK
-    └─ =
-        ├─ val
-        └─ INT_LIT: 10
-            └─ 10
---- AST #18 ---
-└─ =
-    ├─ val
-    └─ INT_LIT: 20
-        └─ 20
---- AST #19 ---
-└─ =
-    ├─ b
-    └─ +
-        ├─ IDF
-        └─ IDF
---- AST #20 ---
-└─ DECL
-    ├─ int
-    └─ i
---- AST #21 ---
-└─ =
-    ├─ b
-    └─ +
-        ├─ *
-        │   ├─ *
-        │   │   ├─ IDF
-        │   │   └─ INT_LIT: 10
-        │   │       └─ 10
-        │   └─ IDF
-        └─ IDF
---- AST #22 ---
-└─ FOR
-    ├─ =
-    │   ├─ i
-    │   └─ INT_LIT: 0
-    │       └─ 0
-    └─ <
-        ├─ i
-        └─ INT_LIT: 10
-            └─ 10
---- AST #23 ---
-└─ BLOCK
-    └─ =
-        ├─ val
-        └─ INT_LIT: 20
-            └─ 20
---- AST #24 ---
-└─ =
-    ├─ teste
-    └─ +
-        ├─ IDF
-        └─ IDF
---- AST #25 ---
 └─ POINTER_DECL
     ├─ int
     └─ =
@@ -887,15 +741,15 @@ ASTs geradas (todas):
             └─ MALLOC_SIZEOF
                 ├─ MAX
                 └─ int
---- AST #26 ---
+--- AST #17 ---
 └─ PRINTF
     └─ STRING
         └─ "Erro na alocação de memória\n"
---- AST #27 ---
+--- AST #18 ---
 └─ RETURN
     └─ INT_LIT: 1
         └─ 1
---- AST #28 ---
+--- AST #19 ---
 └─ IF
     ├─ ==
     │   ├─ ptr
@@ -904,38 +758,38 @@ ASTs geradas (todas):
         └─ PRINTF
             └─ STRING
                 └─ "Erro na alocação de memória\n"
---- AST #29 ---
+--- AST #20 ---
 └─ ARRAY2D_INIT
     ├─ int
     └─ matrix
---- AST #30 ---
+--- AST #21 ---
 └─ STRUCT_INIT_DECL
     ├─ struct Data
     └─ data1
---- AST #31 ---
+--- AST #22 ---
 └─ UNION_DECL
     ├─ union Value
     └─ val
---- AST #32 ---
+--- AST #23 ---
 └─ =
     ├─ MEMBER_ACCESS
     │   ├─ val
     │   └─ i
     └─ INT_LIT: 10
         └─ 10
---- AST #33 ---
+--- AST #24 ---
 └─ =
     ├─ color
     └─ IDF
---- AST #34 ---
+--- AST #25 ---
 └─ PRINTF
     └─ STRING
         └─ "x é positivo.\n"
---- AST #35 ---
+--- AST #26 ---
 └─ PRINTF
     └─ STRING
         └─ "x é negativo ou zero.\n"
---- AST #36 ---
+--- AST #27 ---
 └─ IF_ELSE
     ├─ >
     │   ├─ x
@@ -945,29 +799,29 @@ ASTs geradas (todas):
         └─ PRINTF
             └─ STRING
                 └─ "x é positivo.\n"
---- AST #37 ---
+--- AST #28 ---
 └─ PRINTF
     └─ STRING
         └─ "A cor é Vermelho.\n"
---- AST #38 ---
+--- AST #29 ---
 └─ BREAK
---- AST #39 ---
+--- AST #30 ---
 └─ PRINTF
     └─ STRING
         └─ "A cor é Verde.\n"
---- AST #40 ---
+--- AST #31 ---
 └─ BREAK
---- AST #41 ---
+--- AST #32 ---
 └─ PRINTF
     └─ STRING
         └─ "A cor é Azul.\n"
---- AST #42 ---
+--- AST #33 ---
 └─ BREAK
---- AST #43 ---
+--- AST #34 ---
 └─ PRINTF
     └─ STRING
         └─ "Cor desconhecida.\n"
---- AST #44 ---
+--- AST #35 ---
 └─ SWITCH
     ├─ IDF
     └─ CASE_LIST
@@ -995,12 +849,12 @@ ASTs geradas (todas):
             └─ PRINTF
                 └─ STRING
                     └─ "Cor desconhecida.\n"
---- AST #45 ---
+--- AST #36 ---
 └─ PRINTF
     ├─ STRING
     │   └─ "For loop - Iteração %d\n"
     └─ IDF
---- AST #46 ---
+--- AST #37 ---
 └─ FOR
     ├─ =
     │   ├─ i
@@ -1010,20 +864,20 @@ ASTs geradas (todas):
         ├─ i
         └─ INT_LIT: 5
             └─ 5
---- AST #47 ---
+--- AST #38 ---
 └─ =
     ├─ count
     └─ INT_LIT: 0
         └─ 0
---- AST #48 ---
+--- AST #39 ---
 └─ PRINTF
     ├─ STRING
     │   └─ "While loop - Contagem: %d\n"
     └─ IDF
---- AST #49 ---
+--- AST #40 ---
 └─ ++
     └─ count
---- AST #50 ---
+--- AST #41 ---
 └─ WHILE
     ├─ <
     │   ├─ count
@@ -1034,20 +888,20 @@ ASTs geradas (todas):
             ├─ STRING
             │   └─ "While loop - Contagem: %d\n"
             └─ IDF
---- AST #51 ---
+--- AST #42 ---
 └─ =
     ├─ count
     └─ INT_LIT: 0
         └─ 0
---- AST #52 ---
+--- AST #43 ---
 └─ PRINTF
     ├─ STRING
     │   └─ "Do-while loop - Contagem: %d\n"
     └─ IDF
---- AST #53 ---
+--- AST #44 ---
 └─ ++
     └─ count
---- AST #54 ---
+--- AST #45 ---
 └─ DO_WHILE
     ├─ BLOCK
     │   └─ PRINTF
@@ -1058,7 +912,7 @@ ASTs geradas (todas):
         ├─ count
         └─ INT_LIT: 3
             └─ 3
---- AST #55 ---
+--- AST #46 ---
 └─ =
     ├─ ARRAY_ACCESS
     │   ├─ ptr
@@ -1067,7 +921,7 @@ ASTs geradas (todas):
         ├─ IDF
         └─ INT_LIT: 10
             └─ 10
---- AST #56 ---
+--- AST #47 ---
 └─ FOR
     ├─ =
     │   ├─ i
@@ -1077,53 +931,67 @@ ASTs geradas (todas):
         ├─ i
         └─ INT_LIT: 10
             └─ 10
---- AST #57 ---
+--- AST #48 ---
 └─ FUNCTION_CALL
     ├─ printArray
     └─ ARG_LIST
         ├─ IDF
         └─ INT_LIT: 10
             └─ 10
---- AST #58 ---
+--- AST #49 ---
 └─ =
     ├─ fast_var
     └─ INT_LIT: 30
         └─ 30
---- AST #59 ---
+--- AST #50 ---
 └─ PRINTF
     ├─ STRING
     │   └─ "Variável registrada: %d\n"
     └─ IDF
---- AST #60 ---
+--- AST #51 ---
+└─ TYPEDEF
+    ├─ unsigned long
+    └─ ULong
+--- AST #52 ---
+└─ =
+    ├─ bigNum
+    └─ INT_LIT: 123456789
+        └─ 123456789
+--- AST #53 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "ULong: %lu\n"
+    └─ IDF
+--- AST #54 ---
 └─ FREE
     └─ IDF
---- AST #61 ---
+--- AST #55 ---
 └─ PRINTF
     └─ STRING
         └─ "Memória desalocada com sucesso.\n"
---- AST #62 ---
+--- AST #56 ---
 └─ RETURN
     └─ INT_LIT: 0
         └─ 0
---- AST #63 ---
+--- AST #57 ---
 └─ MAIN_FUNCTION
     ├─ int
     └─ BLOCK
         └─ ARRAY_INIT
             ├─ int
             └─ array
---- AST #64 ---
+--- AST #58 ---
 └─ PRINTF
     └─ STRING
         └─ "Array dinâmico: "
---- AST #65 ---
+--- AST #59 ---
 └─ PRINTF
     ├─ STRING
     │   └─ "%d "
     └─ ARRAY_ACCESS
         ├─ arr
         └─ IDF
---- AST #66 ---
+--- AST #60 ---
 └─ FOR
     ├─ =
     │   ├─ i
@@ -1132,11 +1000,11 @@ ASTs geradas (todas):
     └─ <
         ├─ i
         └─ IDF
---- AST #67 ---
+--- AST #61 ---
 └─ PRINTF
     └─ STRING
         └─ "\n"
---- AST #68 ---
+--- AST #62 ---
 └─ VOID_FUNCTION
     ├─ printArray
     └─ PARAMETER_LIST
@@ -1146,7 +1014,7 @@ ASTs geradas (todas):
         └─ PARAMETER
             ├─ int
             └─ size
---- AST #69 ---
+--- AST #63 ---
 └─ STRUCT_DEF
     ├─ Data
     └─ STRUCT_MEMBERS

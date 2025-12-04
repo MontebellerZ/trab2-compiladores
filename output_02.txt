@@ -1,0 +1,311 @@
+Iniciando análise...
+Arquivo entradas/entrada_02.txt lido com sucesso.
+Iniciando parse...
+Token INCLUDE
+Token LT
+Token STDIO_H
+Token GT
+Token INCLUDE
+Token LT
+Token STDLIB_H
+Token GT
+Token INT
+Token MAIN
+Token LPAREN
+Token RPAREN
+Token LBRACE
+Token INT
+Token MUL
+Token IDF
+Token SEMICOLON
+Token INT
+Token IDF
+Token COMMA
+Token IDF
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Digite o tamanho do array: "
+Token RPAREN
+Token SEMICOLON
+Token SCANF
+Token LPAREN
+Token STRING_LIT: "%d"
+Token COMMA
+Token BITAND
+Token IDF
+Token RPAREN
+Token SEMICOLON
+Token IDF
+Token ASSIGN
+Token LPAREN
+Token INT
+Token MUL
+Token RPAREN
+Token MALLOC
+Token LPAREN
+Token IDF
+Token MUL
+Token SIZEOF
+Token LPAREN
+Token INT
+Token RPAREN
+Token RPAREN
+Token SEMICOLON
+Token IF
+Token LPAREN
+Token IDF
+Token EQ
+Token NULL
+Token RPAREN
+Token LBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Erro: Falha na alocação de memória!\n"
+Token RPAREN
+Token SEMICOLON
+Token RETURN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Preenchendo o array com valores:\n"
+Token RPAREN
+Token SEMICOLON
+Token FOR
+Token LPAREN
+Token IDF
+Token ASSIGN
+Token INT_LIT
+Token SEMICOLON
+Token IDF
+Token LT
+Token IDF
+Token SEMICOLON
+FATOR: n
+Token IDF
+Token INC
+Token RPAREN
+Token LBRACE
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token ASSIGN
+Token IDF
+Token MUL
+FATOR: i
+Token INT_LIT
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "arr[%d] = %d\n"
+Token COMMA
+Token IDF
+Token COMMA
+FATOR: i
+Token IDF
+Token LBRACKET
+Token IDF
+Token RBRACKET
+FATOR: i
+Token RPAREN
+Token SEMICOLON
+Token RBRACE
+Token FREE
+Token LPAREN
+Token IDF
+Token RPAREN
+FATOR: arr
+Token SEMICOLON
+Token PRINTF
+Token LPAREN
+Token STRING_LIT: "Memória desalocada com sucesso.\n"
+Token RPAREN
+Token SEMICOLON
+Token RETURN
+Token INT_LIT
+Token SEMICOLON
+Token RBRACE
+Token EOF
+Análise Sintática concluída com sucesso!
+
+Tabela de símbolos:
+┌─────────┬───────┬───────┬──────┬────────┐
+│ (index) │ tipo  │ id    │ val  │ escopo │
+├─────────┼───────┼───────┼──────┼────────┤
+│ 0       │ '*'   │ 'arr' │ null │ 1      │
+│ 1       │ 'int' │ 'n'   │ null │ 1      │
+│ 2       │ 'int' │ 'i'   │ null │ 1      │
+│ 3       │ 'int' │ 'n,i' │ null │ 1      │
+└─────────┴───────┴───────┴──────┴────────┘
+
+Análise Semântica
+
+Sem erros semânticos encontrados.
+
+
+Atribuições encontradas: 3
+
+--- Atribuição #1 AST ---
+└─ =
+    ├─ arr
+    └─ CAST_MALLOC
+        ├─ int*
+        └─ MALLOC_SIZEOF
+            ├─ n
+            └─ int
+
+--- Atribuição #1 TAC ---
+1: temp167 = arr = temp748
+
+
+--- Atribuição #2 AST ---
+└─ =
+    ├─ i
+    └─ INT_LIT: 0
+        └─ 0
+
+--- Atribuição #2 TAC ---
+1: temp423 = i = 0
+
+
+--- Atribuição #3 AST ---
+└─ =
+    ├─ ARRAY_ACCESS
+    │   ├─ arr
+    │   └─ IDF
+    └─ *
+        ├─ IDF
+        └─ INT_LIT: 10
+            └─ 10
+
+--- Atribuição #3 TAC ---
+1: temp898 = temp661 = temp695
+
+
+Códigos Three Address Code (TAC) gerados (global):
+0: temp787 = MALLOC_SIZEOF CALL n*sizeof(int)
+1: temp748 = temp787 CAST int*
+2: temp167 = arr = temp748
+3: temp521 = arr EQ NULL
+4: temp423 = i = 0
+5: temp194 = i < n
+6: temp576 = i ++ 1
+7: temp661 = arr ARRAY_ACCESS i
+8: temp695 = i MUL 10
+9: temp898 = temp661 = temp695
+10: temp979 = arr ARRAY_ACCESS i
+11: if temp423 goto -1
+
+ASTs geradas (todas): 
+
+--- AST #1 ---
+└─ POINTER_DECL
+    ├─ int
+    └─ DECL
+        ├─ *
+        └─ arr
+--- AST #2 ---
+└─ MULTI_DECL
+    ├─ DECL
+    │   ├─ int
+    │   └─ n
+    └─ i
+--- AST #3 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Digite o tamanho do array: "
+--- AST #4 ---
+└─ SCANF
+    ├─ STRING
+    │   └─ "%d"
+    └─ n
+--- AST #5 ---
+└─ =
+    ├─ arr
+    └─ CAST_MALLOC
+        ├─ int*
+        └─ MALLOC_SIZEOF
+            ├─ n
+            └─ int
+--- AST #6 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Erro: Falha na alocação de memória!\n"
+--- AST #7 ---
+└─ RETURN
+    └─ INT_LIT: 1
+        └─ 1
+--- AST #8 ---
+└─ IF
+    ├─ ==
+    │   ├─ arr
+    │   └─ NULL
+    └─ BLOCK
+        └─ PRINTF
+            └─ STRING
+                └─ "Erro: Falha na alocação de memória!\n"
+--- AST #9 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Preenchendo o array com valores:\n"
+--- AST #10 ---
+└─ =
+    ├─ ARRAY_ACCESS
+    │   ├─ arr
+    │   └─ IDF
+    └─ *
+        ├─ IDF
+        └─ INT_LIT: 10
+            └─ 10
+--- AST #11 ---
+└─ PRINTF
+    ├─ STRING
+    │   └─ "arr[%d] = %d\n"
+    └─ ARG_LIST
+        ├─ IDF
+        └─ ARRAY_ACCESS
+            ├─ arr
+            └─ IDF
+--- AST #12 ---
+└─ FOR
+    ├─ =
+    │   ├─ i
+    │   └─ INT_LIT: 0
+    │       └─ 0
+    └─ <
+        ├─ i
+        └─ IDF
+--- AST #13 ---
+└─ FREE
+    └─ IDF
+--- AST #14 ---
+└─ PRINTF
+    └─ STRING
+        └─ "Memória desalocada com sucesso.\n"
+--- AST #15 ---
+└─ RETURN
+    └─ INT_LIT: 0
+        └─ 0
+--- AST #16 ---
+└─ MAIN_FUNCTION
+    ├─ int
+    └─ BLOCK
+        └─ POINTER_DECL
+            ├─ int
+            └─ DECL
+                ├─ *
+                └─ arr
+--- AST #17 ---
+└─ MAIN_FUNCTION
+    ├─ int
+    └─ BLOCK
+        └─ POINTER_DECL
+            ├─ int
+            └─ DECL
+                ├─ *
+                └─ arr
+Análise concluída com sucesso!
